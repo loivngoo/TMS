@@ -2,8 +2,8 @@
 import { Column, Entity, PrimaryColumn } from 'typeorm';
 
 // User-Role
-@Entity('role_user', { schema: 'public' })
-export class V2RoleUser {
+@Entity('role', { schema: 'public' })
+export class Role {
     @PrimaryColumn({ type: 'integer', name: 'id' })
     id: number;
 

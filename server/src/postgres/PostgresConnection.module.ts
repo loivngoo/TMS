@@ -1,6 +1,7 @@
 import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import * as Enity from '../tms-typeorm-entity'
+import { PostgresRepoModule } from './PostgresRepo';
 
 @Module({
     imports: [
@@ -13,8 +14,9 @@ import * as Enity from '../tms-typeorm-entity'
             username: 'postgres',
             password: 'root',
             database: 'timesheet-management-system',
-            synchronize: true
-        })
+            synchronize: true,
+        }),
+        PostgresRepoModule
     ]
 })
 export class PostgresConnection { }
